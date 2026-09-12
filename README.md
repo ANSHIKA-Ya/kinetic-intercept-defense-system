@@ -43,7 +43,11 @@ At a high level, an interception system must:
 
 This project demonstrates these fundamental concepts using a small-scale physical model.
 
+The one-dimensional formulation allows sensing, kinematics, timing, and control to be studied without the complexity of a full multi-dimensional guidance system.
 
+---
+
+## Problem Statement
 
 Consider a target moving along a known one-dimensional path.
 
@@ -51,15 +55,27 @@ The target's initial release position is not fixed.
 
 The system must:
 
+- Detect the moving target.
+- Measure its motion.
+- Estimate its velocity.
 - Calculate the required interception timing.
 - Activate the interceptor mechanism.
 - Achieve interception near a predetermined region.
+
+The central engineering challenge is **timing the interceptor correctly using measured target motion**.
+
 ---
 
 ## Real-World Anti-Missile System Analogy
+
+A real defensive interception system typically involves sensing and tracking, computational decision-making, and an interceptor.
+
 The high-level analogy used in this prototype is:
 
 | Prototype | Real-world concept |
+|---|---|
+| Incoming rolling ball | Incoming target/threat |
+| Optical sensing system | Radar / tracking sensors |
 | Sensor timing | Target motion measurement |
 | Arduino Due | Embedded processing and control |
 | Calculated target velocity | Target tracking information |
@@ -469,19 +485,6 @@ Hardware refinement
 Mathematical model refinement
 Author
 
-ANSHIKA-YA|---|---|
-| Incoming rolling ball | Incoming target/threat |
-| Optical sensing system | Radar / tracking sensors |
+ANSHIKA-YA
 
-A real defensive interception system typically involves sensing and tracking, computational decision-making, and an interceptor.
-
-
-The central engineering challenge is **timing the interceptor correctly using measured target motion**.
-
-- Detect the moving target.
-- Measure its motion.
-- Estimate its velocity.
----
-
-## Problem Statement
-
+Developed as a defence-themed engineering prototype demonstrating the integration of sensing, physical modelling, prediction, embedded control, and timed actuation.
